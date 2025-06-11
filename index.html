@@ -6,28 +6,64 @@
     <title>Privacy Policy | Dhwani</title>
     <link rel="icon" type="image/png" href="mv.png" />
     <style>
+      html,
+      body,
+      div,
+      h1,
+      h2,
+      h3,
+      p,
+      img,
+      a,
+      section,
+      article,
+      header,
+      footer {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: Arial, sans-serif;
         padding: 2rem;
+        padding-top: 120px; /* Offset for fixed banner */
         line-height: 1.6;
         background-color: #ffffff;
         color: #333333;
       }
       h1,
-      h2 {
+      h2,
+      h3 {
         color: #2c3e50;
       }
+
+      /* Banner Styles */
+
       .banner {
         display: flex;
         align-items: center;
-        padding: 10px 20px;
         background-color: black;
         position: fixed;
         top: 0;
-        width: 100%;
+        left: 0; /* Ensure starts at the very left */
+        width: 100vw; /* Full viewport width */
         z-index: 1000;
         border-top: 3px solid #007aff;
         border-bottom: 3px solid #007aff;
+        padding: 10px 0; /* Removed horizontal padding */
+      }
+
+      .banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .banner-inner {
+        display: flex;
+        align-items: center;
+        padding-left: 2rem; /* Matches body left padding */
       }
 
       .banner-logo {
@@ -47,7 +83,7 @@
         color: white;
       }
 
-      .banner-text .highlight {
+      .highlight {
         background: linear-gradient(
           to right,
           #4facfe,
@@ -63,10 +99,14 @@
   </head>
   <body>
     <header class="banner">
-      <img src="Lyrics-app-Logo.jpg" alt="Dhwani Logo" class="banner-logo" />
-      <div class="banner-text">
-        <h1>Dhwani</h1>
-        <p>Organizing your Lyrics <span class="highlight">Start Here</span></p>
+      <div class="banner-inner">
+        <img src="Lyrics-app-Logo.jpg" alt="Dhwani Logo" class="banner-logo" />
+        <div class="banner-text">
+          <h1>Dhwani</h1>
+          <p>
+            Organizing your Lyrics <span class="highlight">Start Here</span>
+          </p>
+        </div>
       </div>
     </header>
 
